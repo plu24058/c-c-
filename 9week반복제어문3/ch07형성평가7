@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main(void) {
+    int n;
+    scanf("%d", &n);
+
+    int total_rows = 2 * n - 1;
+    for (int i = 1; i <= total_rows; i++) {
+        int spaces = (i <= n) ? 0 : 2 * (i - n);
+        for (int j = 0; j < spaces; j++) {
+            printf(" ");
+        }
+
+        int hashes = (i <= n) ? i : (2 * n - i);
+        for (int j = 0; j < hashes; j++) {
+            printf("#");
+            if (j < hashes - 1) {
+                printf(" ");
+            }
+        }
+        printf("\n");
+    }
+
+    return 0;
+}

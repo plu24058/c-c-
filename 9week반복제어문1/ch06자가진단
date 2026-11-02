@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int choice;
+    
+    while (1) {
+        printf("1. Korea\n");
+        printf("2. USA\n");
+        printf("3. Japan\n");
+        printf("number? ");
+        scanf("%d", &choice);
+        
+        if (choice == 1) {
+            printf("\nSeoul\n\n");
+        } else if (choice == 2) {
+            printf("\nWashington\n\n");
+        } else if (choice == 3) {
+            printf("\nTokyo\n\n");
+        } else {
+            printf("\nnone\n");
+            break;
+        }
+    }
+    
+    return 0;
+}
