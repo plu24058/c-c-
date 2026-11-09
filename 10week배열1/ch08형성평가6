@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main(void) {
+    int arr[100];
+    int count = 0;
+    
+    while (1) {
+        scanf("%d", &arr[count]);
+        if (arr[count] == 0) {
+            break;
+        }
+        count++;
+    }
+    
+    int cnt = 0;
+    int sum = 0;
+    
+    for (int i = 0; i < count; i++) {
+        if (arr[i] % 5 == 0) {
+            cnt++;
+            sum += arr[i];
+        }
+    }
+    
+    double avg = cnt > 0 ? (double)sum / cnt : 0.0;
+    
+    printf("Multiples of 5 : %d\n", cnt);
+    printf("sum : %d\n", sum);
+    printf("avg : %.1f\n", avg);
+    
+    return 0;
+}
